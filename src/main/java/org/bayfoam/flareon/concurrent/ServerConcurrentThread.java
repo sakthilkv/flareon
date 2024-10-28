@@ -22,7 +22,6 @@ public class ServerConcurrentThread extends Thread{
     public void run() {
 
         while(_Server.isBound() && !_Server.isClosed()) {
-
             try {
                 Socket client = _Server.accept();
                 executor.submit(new HttpWorkerThread(client));

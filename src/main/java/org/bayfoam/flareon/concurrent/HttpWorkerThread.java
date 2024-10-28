@@ -1,12 +1,12 @@
 package org.bayfoam.flareon.concurrent;
 
 import org.bayfoam.flareon.HttpRequest;
+import org.bayfoam.flareon.HttpResponse;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
-import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
 public class HttpWorkerThread extends Thread{
@@ -23,11 +23,10 @@ public class HttpWorkerThread extends Thread{
         try {
             InputStreamReader request = new InputStreamReader(client.getInputStream());
             HttpRequest req = new HttpRequest(request);
-            OutputStreamWriter response = new OutputStreamWriter(client.getOutputStream());
             sleep(20);
             Date today = new Date();
-            String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + today;
-            client.getOutputStream().write(httpResponse.getBytes(StandardCharsets.UTF_8));
+            HttpResponse response = new HttpResponse(new OutputStreamWriter(client.getOutputStream()));
+            response.send(400,"OK", "text/html", new StringBuffer("<html><h1>" + today + "</h1></html>"));
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         } finally {
