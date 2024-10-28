@@ -1,11 +1,10 @@
-package org.bayfoam.flareon;
+package org.bayfoam.flareon.http;
 
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Hashtable;
 import java.util.TimeZone;
 
 public class HttpResponse {

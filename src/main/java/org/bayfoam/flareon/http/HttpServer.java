@@ -1,4 +1,4 @@
-package org.bayfoam.flareon;
+package org.bayfoam.flareon.http;
 
 import org.bayfoam.flareon.concurrent.ServerConcurrentThread;
 
@@ -19,7 +19,6 @@ public class HttpServer {
         this.backlog = backlog;
         this.poolSize = poolSize;
     }
-
 
     public void create() throws IOException {
         _ServerThread = new ServerConcurrentThread(address, backlog, poolSize);

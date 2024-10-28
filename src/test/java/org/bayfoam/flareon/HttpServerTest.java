@@ -1,5 +1,7 @@
 package org.bayfoam.flareon;
 
+import org.bayfoam.flareon.http.HttpServer;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
 

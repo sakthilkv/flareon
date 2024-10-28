@@ -1,7 +1,7 @@
 package org.bayfoam.flareon.concurrent;
 
-import org.bayfoam.flareon.HttpRequest;
-import org.bayfoam.flareon.HttpResponse;
+import org.bayfoam.flareon.http.HttpRequest;
+import org.bayfoam.flareon.http.HttpResponse;
 
 import java.io.IOException;
 import java.io.InputStreamReader;

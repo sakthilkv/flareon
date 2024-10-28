@@ -1,4 +1,4 @@
-package org.bayfoam.flareon;
+package org.bayfoam.flareon.http;
 
 import org.bayfoam.flareon.exceptions.HttpFormatException;
 

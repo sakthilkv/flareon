@@ -8,11 +8,10 @@ It can probably handle much larger requests if run on Linux with better CPU and 
 
 ## Todo
 
-- Setting up HTTP Responses.
 - Handle URI
+- Handle Routes
 - Add Cookie System
 - Serve Static Files
 - ## Advanced Features to be implemented
     - Template Engine (make my own or use existing one)
-    - Handle Routes
     - Build Blueprints
