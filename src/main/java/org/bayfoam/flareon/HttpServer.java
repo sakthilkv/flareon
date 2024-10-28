@@ -21,7 +21,6 @@ public class HttpServer {
     }
 
 
-
     public void create() throws IOException {
         _ServerThread = new ServerConcurrentThread(address, backlog, poolSize);
     }
