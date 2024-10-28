@@ -1,4 +1,6 @@
-package org.bayfoam.flareon;
+package org.bayfoam.flareon.concurrent;
+
+import org.bayfoam.flareon.HttpRequest;
 
 import java.io.IOException;
 import java.io.InputStreamReader;

@@ -5,7 +5,8 @@ import java.net.InetSocketAddress;
 
 public class HttpServerTest {
     public static void main(String[] args) throws IOException {
-        ServerConcurrentThread server = new ServerConcurrentThread(new InetSocketAddress(8080));
+        HttpServer server = new HttpServer(new InetSocketAddress(8080));
+        server.create();
         server.start();
     }
 }
