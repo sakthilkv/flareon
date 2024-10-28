@@ -20,7 +20,7 @@ public class HttpServer {
         this.poolSize = poolSize;
     }
 
-    
+
 
     public void create() throws IOException {
         _ServerThread = new ServerConcurrentThread(address, backlog, poolSize);
