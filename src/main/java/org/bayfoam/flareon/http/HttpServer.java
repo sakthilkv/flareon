@@ -1,7 +1,7 @@
 package org.bayfoam.flareon.http;
 
 import org.bayfoam.flareon.concurrent.ServerConcurrentThread;
-import org.bayfoam.flareon.routes.Route;
+import org.bayfoam.flareon.routes.Router;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -30,6 +30,6 @@ public class HttpServer {
     }
 
     public void handleRequest(HttpRequest request, HttpResponse response) throws IOException {
-        Route.handleRequest(request, response);
+        Router.handleRequest(request, response);
     }
 }

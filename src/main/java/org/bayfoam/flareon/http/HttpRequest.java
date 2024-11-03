@@ -6,6 +6,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Hashtable;
+import java.net.URI;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class HttpRequest {
     private String[] _requestLine;
@@ -63,6 +65,11 @@ public class HttpRequest {
 
     public String getRequestURI() {
         return _requestLine[1];
+    }
+
+    public String getRequestPath() {
+        URI parsedURI = URI.create(getRequestURI());
+        return parsedURI.getPath();
     }
 
     public String getProtocol() {
