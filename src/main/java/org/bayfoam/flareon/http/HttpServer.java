@@ -1,6 +1,7 @@
 package org.bayfoam.flareon.http;
 
 import org.bayfoam.flareon.concurrent.ServerConcurrentThread;
+import org.bayfoam.flareon.routes.Route;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -21,10 +22,14 @@ public class HttpServer {
     }
 
     public void create() throws IOException {
-        _ServerThread = new ServerConcurrentThread(address, backlog, poolSize);
+        _ServerThread = new ServerConcurrentThread(address, backlog, poolSize, this);
     }
 
     public void start() {
         _ServerThread.start();
+    }
+
+    public void handleRequest(HttpRequest request, HttpResponse response) throws IOException {
+        Route.handleRequest(request, response);
     }
 }
