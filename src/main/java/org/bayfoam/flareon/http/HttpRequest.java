@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Hashtable;
 import java.net.URI;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class HttpRequest {
     private String[] _requestLine;

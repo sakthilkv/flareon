@@ -25,8 +25,7 @@ public class HttpWorkerThread extends Thread{
         try {
             InputStreamReader requestReader = new InputStreamReader(client.getInputStream());
             HttpRequest req = new HttpRequest(requestReader);
-            OutputStreamWriter responseWriter = new OutputStreamWriter(client.getOutputStream());
-            HttpResponse res = new HttpResponse(responseWriter);
+            HttpResponse res = new HttpResponse(client.getOutputStream());
 
             httpServer.handleRequest(req, res);
         } catch (IOException e) {
