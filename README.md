@@ -15,7 +15,6 @@
 This example demonstrates a basic HTTP server setup with Flareon, capable of:
 - Handling an image request at `/pfp.png`
 - Serving the current date at `/date`
-- Serving custom events at `/event/{id}`
 
 ### Code Example
 
@@ -69,7 +68,6 @@ public static void main(String[] args) throws IOException {
 
 - **`/pfp.png`** - Serves a static image (e.g., profile picture).
 - **`/date`** - Responds with the current date in HTML format.
-- **`/event/{id}`** - Handles event requests (the ID can be modified in route definitions).
 
 ## Performance Considerations
 
