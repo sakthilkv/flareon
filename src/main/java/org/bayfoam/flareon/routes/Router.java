@@ -2,7 +2,6 @@ package org.bayfoam.flareon.routes;
 
 import org.bayfoam.flareon.http.HttpRequest;
 import org.bayfoam.flareon.http.HttpResponse;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
